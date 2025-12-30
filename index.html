@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Love, Our New Year | A Surprise For You</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-hearts" id="floatingHearts"></div>
+        <div class="sparkles" id="sparkles"></div>
+        <div class="love-words" id="loveWords"></div>
+    </div>
+
+    <!-- Cursor Hearts Trail -->
+    <div class="cursor-trail" id="cursorTrail"></div>
+
+    <!-- Music Control -->
+    <div class="music-control" id="musicControl">
+        <i class="fas fa-volume-mute"></i>
+    </div>
+
+    <!-- Progress Indicator -->
+    <div class="progress-container">
+        <div class="progress-dots">
+            <div class="dot active" data-slide="1"></div>
+            <div class="dot" data-slide="2"></div>
+            <div class="dot" data-slide="3"></div>
+            <div class="dot" data-slide="4"></div>
+        </div>
+    </div>
+
+    <!-- Slides Container -->
+    <div class="slides-container">
+        <!-- Slide 1: Welcome -->
+        <div class="slide active" id="slide1">
+            <div class="slide-content">
+                <div class="welcome-animation">
+                    <div class="heart-pulse"><i class="fas fa-heart"></i></div>
+                    <h1 class="main-title">A New Year Surprise<br>Just For You</h1>
+                </div>
+                
+                <div class="name-container">
+                    <div class="name-label">For My Dearest</div>
+                    <div class="her-name" id="herName">My Love</div>
+                    <div class="name-underline"></div>
+                </div>
+                
+                <div class="message-box">
+                    <p class="love-quote">"Every moment with you feels like a beautiful dream I never want to wake up from."</p>
+                    <p class="instruction">Get ready for an emotional journey crafted with all my love. This is more than a gift - it's a piece of my heart.</p>
+                </div>
+                
+                <button class="cta-button pulse" id="nextBtn1">
+                    <span>Begin Our Journey</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Slide 2: Emotional Love Letter -->
+        <div class="slide" id="slide2">
+            <div class="slide-content">
+                <div class="letter-header">
+                    <h1 class="main-title">My Heart's Letter to You</h1>
+                    <div class="envelope-icon"><i class="fas fa-envelope-open-text"></i></div>
+                </div>
+                
+                <div class="letter-container">
+                    <div class="letter-paper">
+                        <div class="letter-date">December 31st</div>
+                        
+                        <div class="letter-content">
+                            <p class="letter-paragraph fade-in">My Dearest Love,</p>
+                            
+                            <p class="letter-paragraph fade-in">As I sit here thinking about this year coming to an end, my heart overflows with gratitude for you. <span class="highlight">You walked into my life and turned everything beautiful.</span></p>
+                            
+                            <p class="letter-paragraph fade-in">I remember the little moments most - your laughter that sounds like music, the way your eyes light up when you're happy, how your hand feels in mine. <span class="highlight">These are the treasures of my year.</span></p>
+                            
+                            <p class="letter-paragraph fade-in">This year had its challenges, but with you by my side, every storm felt manageable. You were my calm in chaos, my light in darkness, my strength when I felt weak. <span class="highlight">You made me believe in love in its purest form.</span></p>
+                            
+                            <p class="letter-paragraph fade-in">There were days when just hearing your voice could fix everything. Nights when your texts were the last thing I read, and mornings when thinking of you was my first conscious thought. <span class="highlight">You became my always.</span></p>
+                            
+                            <p class="letter-paragraph fade-in">I want you to know something important: <span class="highlight-emotional">You are the best decision my heart ever made.</span> In a world full of temporary things, you feel like forever.</p>
+                            
+                            <p class="letter-paragraph fade-in">As we step into the new year, I promise you this: I will love you more tomorrow than I do today. I will cherish every moment, celebrate every laugh, and hold you through every tear. <span class="highlight">Our story is my favorite.</span></p>
+                            
+                            <p class="letter-paragraph fade-in">Thank you for choosing me. Thank you for loving me. Thank you for being you.</p>
+                            
+                            <div class="letter-signature">
+                                <p>With all my heart, now and always,</p>
+                                <div class="signature">Yours forever</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="cta-button" id="nextBtn2">
+                    <span>Unwrap Our Memories</span>
+                    <i class="fas fa-gift"></i>
+                </button>
+            </div>
+        </div>
+
+       <!-- Slide 3: Interactive Memories -->
+<div class="slide" id="slide3">
+    <div class="slide-content">
+        <h1 class="main-title">Our Treasure of Memories</h1>
+        <div class="memory-intro">
+            <p>Scratch to reveal our beautiful moments from this year.<br>Each memory is a precious gem in the jewelry box of our love.</p>
+        </div>
+        
+        <div class="scratch-game-container">
+            <div class="scratch-card-wrapper">
+                <div class="scratch-card">
+                    <canvas id="scratchCanvas" width="500" height="300"></canvas>
+                    
+                    <!-- MEMORIES GRID CONTAINER - THIS WAS MISSING! -->
+                    <div class="memories-grid">
+                        <!-- Memory 1 -->
+                        <div class="memory-photo active" id="memory1"
+                             style="background-image: linear-gradient(rgba(45, 48, 71, 0.5), rgba(45, 48, 71, 0.5)), 
+                                    url('photos/memory1.jpeg');
+                                    background-size: cover;
+                                    background-position: center 30%;">
+                            <div class="memory-overlay">
+                                <div class="memory-label">Our First Adventure</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Memory 2 -->
+                        <div class="memory-photo" id="memory2"
+                             style="background-image: linear-gradient(rgba(45, 48, 71, 0.5), rgba(45, 48, 71, 0.5)), 
+                                    url('photos/memory2.jpeg');
+                                    background-size: cover;
+                                    background-position: center 40%;">
+                            <div class="memory-overlay">
+                                <div class="memory-label">Laughter We Shared</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Memory 3 -->
+                        <div class="memory-photo" id="memory3"
+                             style="background-image: linear-gradient(rgba(45, 48, 71, 0.5), rgba(45, 48, 71, 0.5)), 
+                                    url('photos/memory3.jpeg');
+                                    background-size: cover;
+                                    background-position: center 50%;">
+                            <div class="memory-overlay">
+                                <div class="memory-label">Quiet Moments</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Memory 4 -->
+                        <div class="memory-photo" id="memory4"
+                             style="background-image: linear-gradient(rgba(45, 48, 71, 0.5), rgba(45, 48, 71, 0.5)), 
+                                    url('photos/memory4.jpeg');
+                                    background-size: cover;
+                                    background-position: center 60%;">
+                            <div class="memory-overlay">
+                                <div class="memory-label">Dreaming Together</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END OF MEMORIES GRID -->
+                    
+                </div>
+            </div>
+            
+            <div class="scratch-instructions">
+                <i class="fas fa-hand-pointer"></i>
+                <p>Use your mouse or finger to scratch the silver area</p>
+            </div>
+        </div>
+        
+        <div class="progress-display">
+            <div class="progress-text">Memories Uncovered: <span id="memoryCount">0</span>/4</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+        
+        <!-- Add Navigation Options -->
+        <div class="navigation-options">
+            <button class="cta-button hidden" id="nextBtn3">
+                <span>Final Surprise</span>
+                <i class="fas fa-fireworks"></i>
+            </button>
+            <button class="secondary-button" id="skipScratchBtn">
+                <span>Skip to Next Page</span>
+                <i class="fas fa-forward"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+        <!-- Slide 4: Grand Finale -->
+        <div class="slide" id="slide4">
+            <div class="slide-content">
+                <div class="finale-container">
+                    <div class="new-year-countdown">
+                        <div class="countdown-number">2025</div>
+                        <div class="countdown-text">Our New Beginning</div>
+                    </div>
+                    
+                    <div class="final-message">
+                        <h1 class="main-title">Happy New Year, My Love</h1>
+                        
+                        <div class="message-bubble">
+                            <p class="final-quote">"I loved you yesterday, I love you still,<br>I always have, I always will."</p>
+                        </div>
+                        
+                        <div class="promise-box">
+                            <div class="promise-header">
+                                <i class="fas fa-heart-circle-check"></i>
+                                <h3>My New Year Promises to You</h3>
+                            </div>
+                            <ul class="promise-list">
+                                <li><i class="fas fa-star"></i> To love you more with each passing day</li>
+                                <li><i class="fas fa-star"></i> To be your safe place always</li>
+                                <li><i class="fas fa-star"></i> To create more beautiful memories together</li>
+                                <li><i class="fas fa-star"></i> To grow with you, not just beside you</li>
+                                <li><i class="fas fa-star"></i> To choose you, every single day</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="eternity-symbol">
+                            <div class="infinity">∞</div>
+                            <div class="eternity-text">To Infinity and Beyond</div>
+                        </div>
+                        
+                        <div class="closing-message">
+                            <p>This year was beautiful because of you.<br>Next year will be magical with you.</p>
+                            <p class="highlight-final">I can't wait to write our next chapter together.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="final-actions">
+                        <button class="cta-button fireworks" id="showFireworksBtn">
+                            <span>Celebrate With Me</span>
+                            <i class="fas fa-fireworks"></i>
+                        </button>
+                        <button class="secondary-button" id="restartBtn">
+                            <span>Relive The Magic</span>
+                            <i class="fas fa-redo"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fireworks Container -->
+    <div class="fireworks-container" id="fireworksContainer"></div>
+
+    <!-- Audio -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-romantic-sunset-687.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <audio id="scratchSound">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-retro-game-emergency-alarm-1000.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="revealSound">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-magic-sparkles-300.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
